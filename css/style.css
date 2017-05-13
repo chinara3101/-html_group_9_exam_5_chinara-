@@ -117,15 +117,55 @@ header{
 .slide1{
 	position: relative;
 }
+.slick-arrow{
+ 	position: absolute;
+ 	height: 100px;
+ 	width: 60px;
+ 	background: transparent;
+ 	border:none;
+ 	top:50%; 	
+ 	margin: -50px 0 0 0;
+ 	z-index: 100;
+ 	font-size: 0;
+ }
+ .slick-prev{ 	
+ 	left: -2%;
+ }
+ .slick-next{
+ 	right: 2%;
+ }
+ .slick-arrow::before{
+ 	content: "";
+ 	background: #e8645a;
+ 	width: 52px;
+ 	height: 58px;
+  	position: absolute;
+ 	top: 50%;
+  	margin: -29px -26px 0 0; 	
+ 	background-repeat: no-repeat;
+ } 
+ .slick-prev::before{
+ 	background-image: url(../img/arrow-slider.png);
+ 	background-position: 50% 50%; 
+ 	border-top-right-radius: 5px;
+ 	border-bottom-right-radius:5px;	
+ 	/*right: 50%;*/
+ } 
+ .slick-next::before{
+ 	background-position: 50% 50%; 
+ 	background-image: url(../img/arrow-next-slider.png);
+ 	left: 50%;
+ 	border-top-left-radius: 5px;
+ 	border-bottom-left-radius:5px;	
+ }
 .title{
-	width: 336px;
-	height: 140px;
-	text-align: center;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin: -70px 0 0 -168px;
-	padding: 0 0 0 0;
+	width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 126px;
+    left: 0;
+    margin: 0 0 0 10%;
+    padding: 0 19% 0 35%;
 }
 h1{
 	font-size: 50px;
@@ -203,6 +243,7 @@ h1{
 	display: -o-flex;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 50px 0 70px 0;
 }
 .item-service{
 	width: 23%;
@@ -210,13 +251,17 @@ h1{
 	color: #8c9898;
 	background: #fff;
 	position: relative;
+	margin: 0 0 0 1%;
+}
+.item-service:first-child{
+	margin: 0;
 }
 .item-service h5{
 	font-size: 16px;
 	line-height: 20px;
 	text-transform: uppercase;
 	font-weight: 600;
-	margin:  58px 0 27px 0
+	margin:  58px 0 27px 0;
 	padding: 60px 0 0 0;
 	position: relative;
 }
@@ -229,19 +274,22 @@ h1{
     right: 34%;
     color: #62bdbd;
 }
+.hand h5::before{
+	content:  " \f0a4";
+}
 .item-service p{
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 400;
-	padding: 0 0 0 0;
+	padding: 0 10px 35px 10px;
 	margin:  0 0 35px 0;
 }
 .read-more{
 	box-shadow: inset 0px -4px 5px 0px rgba(98,185,176,1);
 	background: #76c7c0; 
 	position: absolute;
-	bottom: 0;
-	right: 50%;   
+	bottom: -34px;
+    right: 13%;  
 }
 .read-more:hover{	
 	background: #1e5799;
